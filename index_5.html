@@ -1,0 +1,233 @@
+<!DOCTYPE HTML!>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Welcome to chord</title>
+</head>
+<body>
+  <div class="header">
+    <img class="logo" src="logo.png">
+  </div> 
+
+  <div class="menu">
+    <div class="widget">
+      <h3 class="widget-title">Информация:</h3>
+      <ul class="widget-list">
+        <link><a href="index.html"> О нас</a></link>
+        <link><a href="index_2.html"> О студуенте</a></link>
+      </ul>
+      <h3 class="widget-title">Каталог:</h3>
+      <ul class="widget-list">
+        <link><a href="index_3.html"> Акустика</a></link>
+        <link><a href="index_4.html"> Транс-акустика</a></link>
+        <link><a href="index_5.html"> Классика</a></link>
+        <link><a href="index_6.html"> 12-ти струнка</a></link>
+      </ul>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card__top">
+          <a href="Yamaha C40.html" class="card__image">
+            <img
+              src="image/Yamaha C40/Yamaha C40.jpg"
+              alt="Yamaha C40"
+            />
+          </a>
+          <div class="card__label">-10%</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__prices">
+            <div class="card__price card__price--discount">16200</div>
+            <div class="card__price card__price--common">18000</div>
+          </div>
+          <a class="card__title">
+            Yamaha C40
+          </a>
+          <p class = "ptr">Форма: CG</p>
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__top">
+          <a href="Yamaha CG142S.html" class="card__image">
+            <img
+              src="image/Yamaha CG142S/Yamaha CG142S.jpg"
+              alt="Yamaha CG142S"
+            />
+          </a>
+          <div class="card__label">-10%</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__prices">
+            <div class="card__price card__price--discount">32400</div>
+            <div class="card__price card__price--common">36000</div>
+          </div>
+          <a class="card__title">
+            Yamaha CG142S
+          </a>
+          <p class = "ptr">Форма: CG</p>
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__top">
+          <a href="PEREZ 610 CEDAR.html" class="card__image">
+            <img
+              src="image/PEREZ 610 CEDAR/PEREZ 610 CEDAR.jpg"
+              alt="PEREZ 610 CEDAR"
+            />
+          </a>
+          <div class="card__label">-10%</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__prices">
+            <div class="card__price card__price--discount">45000</div>
+            <div class="card__price card__price--common">50000</div>
+          </div>
+          <a class="card__title">
+            PEREZ 610 CEDAR
+          </a>
+          <p class = "ptr">Форма: CG</p>
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__top">
+          <a href="Alhambra Classical Concert 9P.html" class="card__image">
+            <img
+              src="image/Alhambra Classical Concert 9P/Alhambra Classical Concert 9P.jpg"
+              alt="Alhambra Classical Concert 9P"
+            />
+          </a>
+          <div class="card__label">-10%</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__prices">
+            <div class="card__price card__price--discount">207000</div>
+            <div class="card__price card__price--common">230000</div>
+          </div>
+          <a class="card__title">
+            Alhambra Classical Concert 9P
+          </a>
+          <p class = "ptr">Форма: CG</p>
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card__top">
+          <a href="FENDER SQUIER SA-150N.html" class="card__image">
+            <img
+              src="image/FENDER SQUIER SA-150N/FENDER SQUIER SA-150N.jpg"
+              alt="FENDER SQUIER SA-150N"
+            />
+          </a>
+          <div class="card__label">-10%</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__prices">
+            <div class="card__price card__price--discount">14400</div>
+            <div class="card__price card__price--common">16000</div>
+          </div>
+          <a class="card__title">
+            FENDER SQUIER SA-150N
+          </a>
+          <p class = "ptr">Форма: CG</p>
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <button class="cart" id="cart">
+    <img class="cart__image" src="cart.png" alt="Cart" srcset="" />
+    <div class="cart__num" id="cart_num">0</div>
+  </button>
+  <footer><p>&copy; Почта для вопросов и предложений: ahliyan@mail.ru 2024г.</p></footer>
+
+
+<!--Разметка окна оформления заказа:-->
+<div class="popup">
+  <div class="popup__container" id="popup_container">
+    <div class="popup__item">
+      <h1 class="popup__title">Оформление заказа</h1>
+    </div>
+   
+ <div class="popup__item" id="popup_product_list">
+      <div class="popup__product">
+        <div class="popup__product-wrap">
+          <img
+            src=""
+            alt=""
+            class="popup__product-image"
+          />
+          <h2 class="popup__product-title">
+           
+          </h2>
+        </div>
+        <div class="popup__product-wrap">
+          <div class="popup__product-price"></div>
+          <button class="popup__product-delete">&#10006;</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="popup__item">
+      <div class="popup__cost">
+        <h2 class="popup__cost-title">Итого</h2>
+        <output class="popup__cost-value" id="popup_cost">0</output>
+      </div>
+      <div class="popup__cost">
+        <h2 class="popup__cost-title">Скидка</h2>
+        <output class="popup__cost-value" id="popup_discount">0</output>
+      </div>
+      <div class="popup__cost">
+        <h2 class="popup__cost-title">Итого со скидкой</h2>
+        <output class="popup__cost-value" id="popup_cost_discount"
+          >0</output
+        >
+      </div>
+    </div>
+    <button class="popup__close" id="popup_close">&#10006;</button>
+    <button class="popup__order-button" id="order-button">Оформить заказ</button>
+
+    <div class="feedback-form" id="feedback-form-popup" style="display: none;">
+      <form id="feedback-form">
+        <label for="lastname">Фамилия: </label>
+        <input type="text" id="lastname" name="lastname" onchange="toUpperCase(this)"><br>
+
+        <label for="firstname">Имя: </label>
+        <input type="text" id="firstname" name="firstname" onchange="toUpperCase(this)"><br>
+
+        <label for="phone">Телефон: </label>
+        <input type="number" id="phone" name="phone"><br>
+
+        <label for="email">Электронная почта: </label>
+        <input type="text" id="email" name="email"><br>
+
+        <label for="address">Адрес доставки: </label>
+        <input type="text" id="address" name="address"><br>
+
+        <input type="submit" value="Отправить">
+    </form>
+
+  </div>
+</div>
+
+
+
+<script src="main.js"></script>
+
+
+</body>
+</html>
+

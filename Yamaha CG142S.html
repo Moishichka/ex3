@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Welcome to chord</title>
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="logo.png">
+    </div>
+    <div class="menu">
+        <div class="widget">
+          <h3 class="widget-title">Информация:</h3>
+          <ul class="widget-list">
+            <link><a href="index.html"> О нас</a></link>
+            <link><a href="index_2.html"> О студуенте</a></link>
+          </ul>
+          <h3 class="widget-title">Каталог:</h3>
+          <ul class="widget-list">
+            <link><a href="index_3.html"> Акустика</a></link>
+            <link><a href="index_4.html"> Транс-акустика</a></link>
+            <link><a href="index_5.html"> Классика</a></link>
+            <link><a href="index_6.html"> 12-ти струнка</a></link>
+          </ul>
+        </div>
+
+        <div class="product-container">
+            <div class="product-galary">
+                <img id="kartinka" src="image/Yamaha CG142S/Yamaha CG142S_1.jpg">
+
+                <div class="product-galary-serch">
+                    <div class="thumbnails">
+                        <img src="image/Yamaha CG142S/Yamaha CG142S_1.jpg" class="thumbnail">
+                        <img src="image/Yamaha CG142S/Yamaha CG142S_2.jpg" class="thumbnail">
+                        <img src="image/Yamaha CG142S/Yamaha CG142S_3.jpg" class="thumbnail">
+                    </div>
+                    <script>
+                        const mainImage = document.getElementById('kartinka');
+                        const thumbnails = document.querySelectorAll('.thumbnail');
+
+                        thumbnails.forEach(thumbnail => {
+                            thumbnail.addEventListener('mouseover', () => {
+                                mainImage.src = thumbnail.getAttribute('src');
+                            });
+                        });
+                    </script>
+                </div>
+
+                <div class="product-gl">
+                    <button onclick="galleryOld()" class="button"> &lt; </button>
+                    <button onclick="galleryNew()" class="button"> &gt; </button>
+                </div>
+                <script>
+                    let i = 0;
+                    const arr = ["1", "2", "3"];
+                    const kartinka = document.getElementById('kartinka');
+
+                    function galleryOld() {
+                        if (i >= 1) {
+                            i--;
+                        } else {
+                          i = arr.length - 1;
+                        }
+                        kartinka.src = 'image/Yamaha CG142S/Yamaha CG142S_' + arr[i] + '.jpg';
+                    }
+
+                    function galleryNew() {
+                        if (i < arr.length - 1) {
+                            i++;
+                        } else {
+                            i = 0;
+                        }
+                        kartinka.src = 'image/Yamaha CG142S/Yamaha CG142S_' + arr[i] + '.jpg';
+                    }
+                </script>
+            </div>
+            <div class="product-info">
+                <h1> Yamaha CG142S </h1>
+                <div class="product-rating">
+                    <div id="rating_cart_bar">
+                        <span id="rate_1">★</span>
+                        <span id="rate_2">★</span>
+                        <span id="rate_3">★</span>
+                        <span id="rate_4">★</span>
+                        <span id="rate_5">☆</span>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <div><span class="label">Класс: </span><span class="value">Классика</span></div>
+                    <div><span class="label">Страна: </span><span class="value">Индия</span></div>
+                    <div><span class="label">Форма: </span><span class="value">CG</span></div>
+                    <div><span class="label">Верхняя дека: </span><span class="value">Массив ели</span></div>
+                    <div><span class="label">Нижняя дека: </span><span class="value">Нато</span></div>
+                    <div><span class="label">Обечайка: </span><span class="value">Нато</span></div>
+                </div>
+                <div class="card__bottom">
+                    <div class="card__prices">
+                        <div class="card__price card__price--discount">32400</div>
+                        <div class="card__price card__price--common">36000</div>
+                    </div>
+                </div>
+                
+                <div class="reviews-container">
+                    <div class="reviews">
+                        <div class="leave-review">
+                            <h2>Оставить отзыв:</h2>
+                            <form id="review-form" method="post">
+                              <label for="rait">Рейтинг:</label>
+                              <div class="reviews-rating">
+                                  <div id="rating_bar">
+                                        <span id="rate_1">★</span>
+                                        <span id="rate_2">☆</span>
+                                        <span id="rate_3">☆</span>
+                                        <span id="rate_4">☆</span>
+                                        <span id="rate_5">☆</span>
+                                    </div>
+                                    <script>
+                                        let spans = document.getElementById("rating_bar")
+                                        .getElementsByTagName('span');
+                                        for(i=0;i<spans.length;i++)
+                                            spans[i].onmouseover=hoverStar;
+                                        function hoverStar() {
+                                            for(i=0;i<this.id.charAt(5);i++)
+                                                spans[i].innerText='★';
+                                            for(i=this.id.charAt(5);i<5;i++)
+                                                spans[i].innerText='☆';
+                                        }
+                                    </script>
+                                </div>
+                                <label for="name_r">Ваше имя:</label>
+                                <input type="text" id="name_r" name="name_r" required>
+                                <br>
+                                <label for="review">Ваш отзыв:</label>
+                                <textarea id="review" name="review" rows="4" cols="50" required></textarea>
+                                <br>
+                                <input type="submit" value="Отправить">
+                            </form>
+                            <h3>Отзывы:</h3>
+                            <div class="existing-review">
+                                <div class="reviews-rating">
+                                    <div id="rating_bar">
+                                        <span id="rate_1">★</span>
+                                        <span id="rate_2">★</span>
+                                        <span id="rate_3">★</span>
+                                        <span id="rate_4">★</span>
+                                        <span id="rate_5">☆</span>
+                                    </div>
+                                    <p><strong>Иван:</strong> Прекрасная гитара, звучит отлично. Рекомендую!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <button class="cart" id="cart">
+    <img class="cart__image" src="cart.png" alt="Cart" srcset="" />
+    <div class="cart__num" id="cart_num">0</div>
+  </button>
+  <footer><p>&copy; Почта для вопросов и предложений: ahliyan@mail.ru 2024г.</p></footer>
+
+
+    <!--Разметка окна оформления заказа:-->
+  <div class="popup">
+    <div class="popup__container" id="popup_container">
+      <div class="popup__item">
+        <h1 class="popup__title">Оформление заказа</h1>
+      </div>
+       
+      <div class="popup__item" id="popup_product_list">
+        <div class="popup__product">
+          <div class="popup__product-wrap">
+            <img
+              src=""
+              alt=""
+              class="popup__product-image"
+            />
+            <h2 class="popup__product-title"></h2>
+
+          </div>
+          <div class="popup__product-wrap">
+            <div class="popup__product-price"></div>
+              <button class="popup__product-delete">&#10006;</button>
+            </div>
+          </div>
+        </div>
+    
+    
+    
+        <div class="popup__item">
+          <div class="popup__cost">
+            <h2 class="popup__cost-title">Итого</h2>
+            <output class="popup__cost-value" id="popup_cost">0</output>
+          </div>
+          <div class="popup__cost">
+            <h2 class="popup__cost-title">Скидка</h2>
+            <output class="popup__cost-value" id="popup_discount">0</output>
+          </div>
+          <div class="popup__cost">
+            <h2 class="popup__cost-title">Итого со скидкой</h2>
+            <output class="popup__cost-value" id="popup_cost_discount"
+              >0</output
+            >
+          </div>
+        </div>
+        <button class="popup__close" id="popup_close">&#10006;</button>
+        <button class="popup__order-button" id="order-button">Оформить заказ</button>
+    
+        <div class="feedback-form" id="feedback-form-popup" style="display: none;">
+          <form id="feedback-form">
+            <label for="lastname">Фамилия: </label>
+            <input type="text" id="lastname" name="lastname" onchange="toUpperCase(this)"><br>
+    
+            <label for="firstname">Имя: </label>
+            <input type="text" id="firstname" name="firstname" onchange="toUpperCase(this)"><br>
+    
+            <label for="phone">Телефон: </label>
+            <input type="number" id="phone" name="phone"><br>
+    
+            <label for="email">Электронная почта: </label>
+            <input type="text" id="email" name="email"><br>
+    
+            <label for="address">Адрес доставки: </label>
+            <input type="text" id="address" name="address"><br>
+    
+            <input type="submit" value="Отправить">
+        </form>
+    
+      </div>
+    </div>
+  </div>
+    
+  <script src="main.js"></script>
+      
+</body>
+</html>
+    

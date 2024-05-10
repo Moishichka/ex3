@@ -1,0 +1,231 @@
+<!DOCTYPE HTML!>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Welcome to chord</title>
+</head>
+<body>
+  <div class="header">
+    <img class="logo" src="logo.png">
+  </div> 
+
+  <div class="menu">
+    <div class="widget">
+      <h3 class="widget-title">Информация:</h3>
+      <ul class="widget-list">
+        <link><a href="index.html"> О нас</a></link>
+        <link><a href="index_2.html"> О студуенте</a></link>
+      </ul>
+      <h3 class="widget-title">Каталог:</h3>
+      <ul class="widget-list">
+        <link><a href="index_3.html"> Акустика</a></link>
+        <link><a href="index_4.html"> Транс-акустика</a></link>
+        <link><a href="index_5.html"> Классика</a></link>
+        <link><a href="index_6.html"> 12-ти струнка</a></link>
+      </ul>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card__top">
+          <a href="IBANEZ PF1512-NT.html" class="card__image">
+            <img
+              src="image/IBANEZ PF1512-NT/IBANEZ PF1512-NT.jpg"
+              alt="IBANEZ PF1512-NT"
+            />
+          </a>
+          <div class="card__label">-10%</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__prices">
+            <div class="card__price card__price--discount">25200</div>
+            <div class="card__price card__price--common">28000</div>
+          </div>
+          <a class="card__title">
+            IBANEZ PF1512-NT
+          </a>
+          <p class = "ptr">Форма: Dreadnought</p>
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__top">
+          <a href="Dean AX D12 MAH.html" class="card__image">
+            <img
+              src="image/Dean AX D12 MAH/Dean AX D12 MAH.jpg"
+              alt="Dean AX D12 MAH"
+            />
+          </a>
+          <div class="card__label">-10%</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__prices">
+            <div class="card__price card__price--discount">36000</div>
+            <div class="card__price card__price--common">40000</div>
+          </div>
+          <a class="card__title">
+            Dean AX D12 MAH
+          </a>
+          <p class = "ptr">Форма: Dreadnought</p>
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__top">
+          <a href="IBANEZ AEG5012-BKH.html" class="card__image">
+            <img
+              src="image/IBANEZ AEG5012-BKH/IBANEZ AEG5012-BKH.jpg"
+              alt="IBANEZ AEG5012-BKH"
+            />
+          </a>
+          <div class="card__label">-10%</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__prices">
+            <div class="card__price card__price--discount">39600</div>
+            <div class="card__price card__price--common">44000</div>
+          </div>
+          <a class="card__title">
+            IBANEZ AEG5012-BKH
+          </a>
+          <p class = "ptr">Форма: Dreadnought</p>
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__top">
+          <a href="FENDER CD-140SCE 12.html" class="card__image">
+            <img
+              src="image/FENDER CD-140SCE 12/FENDER CD-140SCE 12.jpg"
+              alt="FENDER CD-140SCE 12"
+            />
+          </a>
+          <div class="card__label">-10%</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__prices">
+            <div class="card__price card__price--discount">82800</div>
+            <div class="card__price card__price--common">92000</div>
+          </div>
+          <a class="card__title">
+            FENDER CD-140SCE 12
+          </a>
+          <p class = "ptr">Форма: Dreadnought</p>
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__top">
+          <a href="IBANEZ AAD1012E-OPN.html" class="card__image">
+            <img
+              src="image/IBANEZ AAD1012E-OPN/IBANEZ AAD1012E-OPN.jpg"
+              alt="IBANEZ AAD1012E-OPN"
+            />
+          </a>
+          <div class="card__label">-10%</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__prices">
+            <div class="card__price card__price--discount">48600</div>
+            <div class="card__price card__price--common">54000</div>
+          </div>
+          <a class="card__title">
+            IBANEZ AAD1012E-OPN
+          </a>
+          <p class = "ptr">Форма: Dreadnought</p>
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <button class="cart" id="cart">
+    <img class="cart__image" src="cart.png" alt="Cart" srcset="" />
+    <div class="cart__num" id="cart_num">0</div>
+  </button>
+  <footer><p>&copy; Почта для вопросов и предложений: ahliyan@mail.ru 2024г.</p></footer>
+
+
+<!--Разметка окна оформления заказа:-->
+<div class="popup">
+  <div class="popup__container" id="popup_container">
+    <div class="popup__item">
+      <h1 class="popup__title">Оформление заказа</h1>
+    </div>
+   
+ <div class="popup__item" id="popup_product_list">
+      <div class="popup__product">
+        <div class="popup__product-wrap">
+          <img
+            src=""
+            alt=""
+            class="popup__product-image"
+          />
+          <h2 class="popup__product-title">
+           
+          </h2>
+        </div>
+        <div class="popup__product-wrap">
+          <div class="popup__product-price"></div>
+          <button class="popup__product-delete">&#10006;</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="popup__item">
+      <div class="popup__cost">
+        <h2 class="popup__cost-title">Итого</h2>
+        <output class="popup__cost-value" id="popup_cost">0</output>
+      </div>
+      <div class="popup__cost">
+        <h2 class="popup__cost-title">Скидка</h2>
+        <output class="popup__cost-value" id="popup_discount">0</output>
+      </div>
+      <div class="popup__cost">
+        <h2 class="popup__cost-title">Итого со скидкой</h2>
+        <output class="popup__cost-value" id="popup_cost_discount"
+          >0</output
+        >
+      </div>
+    </div>
+    <button class="popup__close" id="popup_close">&#10006;</button>
+    <button class="popup__order-button" id="order-button">Оформить заказ</button>
+
+    <div class="feedback-form" id="feedback-form-popup" style="display: none;">
+      <form id="feedback-form">
+        <label for="lastname">Фамилия: </label>
+        <input type="text" id="lastname" name="lastname" onchange="toUpperCase(this)"><br>
+
+        <label for="firstname">Имя: </label>
+        <input type="text" id="firstname" name="firstname" onchange="toUpperCase(this)"><br>
+
+        <label for="phone">Телефон: </label>
+        <input type="number" id="phone" name="phone"><br>
+
+        <label for="email">Электронная почта: </label>
+        <input type="text" id="email" name="email"><br>
+
+        <label for="address">Адрес доставки: </label>
+        <input type="text" id="address" name="address"><br>
+
+        <input type="submit" value="Отправить">
+    </form>
+
+  </div>
+</div>
+
+
+
+<script src="main.js"></script>
+
+
+</body>
+</html>
